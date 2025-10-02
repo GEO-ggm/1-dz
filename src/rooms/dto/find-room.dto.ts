@@ -1,3 +1,8 @@
+import { Prop, Schema } from '@nestjs/mongoose';
+
+
 export class FindRoomDto {
-   titleRoom: string;
+   
+   numRoom: string;
 }
+

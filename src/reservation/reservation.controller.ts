@@ -18,7 +18,7 @@ export class ReservationController {
     
         @Post('create')
         async create(@Body() dto: CreateReservationDto){
-            return this.reservationService.reservation(dto)
+            return this.reservationService.createReservation(dto)
         }
     
         @Patch('update/:id')

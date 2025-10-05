@@ -3,6 +3,7 @@ import { Body, Controller, Delete, Get, HttpCode, Param, Patch, Post } from '@ne
 import { RoomsModel } from './rooms.model/rooms.model';
 import { UpdateRoomDto } from './dto/update-room.dto';
 import { RoomsService } from './rooms.service';
+import { CreateRoomDto } from './dto/create-room.dto';
 
 @Controller('rooms')
 export class RoomsController {
@@ -15,7 +16,7 @@ export class RoomsController {
     async delete (@Param('id')id: string){}
 
     @Post('create')
-    async create(@Body() dto: RoomsModel ){
+    async create(@Body() dto: CreateRoomDto ){
         return this.roomService.add(dto);
     }
 

@@ -10,11 +10,11 @@ class BookingOrFree {
 
 @Schema()
 export class ReservationModel {
-    @Prop({type: () => [Date]})
-    isBookingorFree:CreateReservationDto[];
+    @Prop({ type: [BookingOrFree], default: [] })
+    isBookingorFree:BookingOrFree[];
 
-    @Prop({type: ()=> FindRoomDto})
-    room: FindRoomDto
+   @Prop({ required: true, type: Number })
+    room: number
 }
 
 export const Reservation = SchemaFactory.createForClass(ReservationModel);

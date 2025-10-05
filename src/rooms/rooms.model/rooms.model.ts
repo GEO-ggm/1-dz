@@ -15,9 +15,8 @@ export class RoomsModel {
     ownerRoom: string;
     @Prop({required: true})
     dignities: string[];
-    // @Prop({required: true,  type: ()=> ReservationModel})
-    // reservation: ReservationModel;
+
 }
 
 export const Rooms = SchemaFactory.createForClass(RoomsModel);
-export type RoomDoc = RoomsModel & FindRoomDto & Document;
+export type RoomDoc = RoomsModel  & Document;
